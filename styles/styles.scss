@@ -2,6 +2,25 @@
 
 $fontStyles: 'Raleway', sans-serif;
 
+%form-border {
+    border-radius: 1em;
+    background: white;
+    padding: 1em 1.875em;
+    color: #333;
+}
+%input {
+    width: 100%;
+    padding: 0.667em;
+    border: #ddd 1px solid;
+    border-radius: 0.5em;
+}
+%btn {
+    display: block;
+    border-radius: 0.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,17 +33,15 @@ body{
     line-height: 1.8;
     font-size: 14px;
 }
-.form-signup{
-    border-radius: 1em;
-    background: white;
-    padding: 1em 1.875em;
-    color: #333;
+.form-signup, .form-signin{
+    @extend %form-border;
     label {
         display: block;
         color: #666;
     }
     p{
         text-align: center;
+        margin-top: 0.67em;
         
     }
     h1{
@@ -37,22 +54,46 @@ body{
         border: #ddd 1px solid;
         border-radius: 0.5em;
     }
-    span{
+    input[type= "button"]{
+        @extend %input;
+        display: none;
+    }
+    .blue{
         color: blue;
+    }
+    .txt-google{
+        margin-left: -26mm;
+    }
+    img{
+        margin: auto 11mm;
+        float: left;
+        width: 24px;
     }
     .form-group{
         margin-top: 1em;
     }
     .btn{
-        display: block;
+        @extend %btn;
         background: #49c1a2;
         color: white;
         margin-top: 2em;
-        cursor: pointer;
         font-size: medium;
+        padding: 0.5em;
+    }
+    .btn-google{
+        @extend %btn;
+        background: white;
+        //background: url(../src/img/google-logo-png-29546.png) no-repeat scroll 4px 4px;
+        color: black;
+        font-size: small;
+        padding: 7px;
+        border: 1px #ddd solid;
     }
     .btn:hover{
         background:#37a08e
+    }
+    .btn-google:hover{
+        background: whitesmoke
     }
     .agreement {
         font-size: 10px;
@@ -60,13 +101,15 @@ body{
     }
 }
 footer{
-    color: white;
     text-align: center;
     margin-top: 1em;
     a{
         color: #49c1a2;
         text-decoration: none;
     }
+}
+.white{
+    color: white;
 }
 .container{
     margin: 1.875em auto;

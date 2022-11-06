@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.form-signup, .form-signin {
+  border-radius: 1em;
+  background: white;
+  padding: 1em 1.875em;
+  color: #333;
+}
+
+.form-signup input[type=button], .form-signin input[type=button] {
+  width: 100%;
+  padding: 0.667em;
+  border: #ddd 1px solid;
+  border-radius: 0.5em;
+}
+
+.form-signup .btn-google, .form-signin .btn-google, .form-signup .btn, .form-signin .btn {
+  display: block;
+  border-radius: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,59 +33,77 @@ body {
   font-size: 14px;
 }
 
-.form-signup {
-  border-radius: 1em;
-  background: white;
-  padding: 1em 1.875em;
-  color: #333;
-}
-.form-signup label {
+.form-signup label, .form-signin label {
   display: block;
   color: #666;
 }
-.form-signup p {
+.form-signup p, .form-signin p {
   text-align: center;
+  margin-top: 0.67em;
 }
-.form-signup h1 {
+.form-signup h1, .form-signin h1 {
   font-size: 24px;
   text-align: center;
 }
-.form-signup input {
+.form-signup input, .form-signin input {
   width: 100%;
   padding: 0.667em;
   border: #ddd 1px solid;
   border-radius: 0.5em;
 }
-.form-signup span {
+.form-signup input[type=button], .form-signin input[type=button] {
+  display: none;
+}
+.form-signup .blue, .form-signin .blue {
   color: blue;
 }
-.form-signup .form-group {
+.form-signup .txt-google, .form-signin .txt-google {
+  margin-left: -26mm;
+}
+.form-signup img, .form-signin img {
+  margin: auto 11mm;
+  float: left;
+  width: 24px;
+}
+.form-signup .form-group, .form-signin .form-group {
   margin-top: 1em;
 }
-.form-signup .btn {
-  display: block;
+.form-signup .btn, .form-signin .btn {
   background: #49c1a2;
   color: white;
   margin-top: 2em;
-  cursor: pointer;
   font-size: medium;
+  padding: 0.5em;
 }
-.form-signup .btn:hover {
+.form-signup .btn-google, .form-signin .btn-google {
+  background: white;
+  color: black;
+  font-size: small;
+  padding: 7px;
+  border: 1px #ddd solid;
+}
+.form-signup .btn:hover, .form-signin .btn:hover {
   background: #37a08e;
 }
-.form-signup .agreement {
+.form-signup .btn-google:hover, .form-signin .btn-google:hover {
+  background: whitesmoke;
+}
+.form-signup .agreement, .form-signin .agreement {
   font-size: 10px;
   margin-top: 1.23em;
 }
 
 footer {
-  color: white;
   text-align: center;
   margin-top: 1em;
 }
 footer a {
   color: #49c1a2;
   text-decoration: none;
+}
+
+.white {
+  color: white;
 }
 
 .container {
